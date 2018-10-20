@@ -11,15 +11,26 @@ $(document).ready(function() {
     });
 
 
-    // Grab target age for translation
+    // Grab target age and text for translation
     $('#translateButton').click(function (e) {
-        translateTarget = getAge();
-        console.log(translateTarget)
+        var translateData = {}
+        translateData.age = getAge();
+        translateData.text = $("#input").val(); 
 
-        var translateText = $("#input").val(); 
-        // Todo: Send translateTarget age to backend function
-        var translatedText = translateText // This would be replaced with a translate function
-        $("#output").val(translatedText);      
+        $.ajax({
+            type: 'POST',
+            url: '/translate',
+            dataType: 'application/json',
+            crossDomain: true,
+            data: translateData,
+            dataType: "json",
+            success: function (translatedText) {
+                $("#output").val(translatedText);
+            },
+            error: function () {
+              console.log("Translation failure.");
+            }
+          });
     });
 
 
