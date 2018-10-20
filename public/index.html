@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Age Translator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    <!-- Font Import -->
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:600" rel="stylesheet">
+    
+    <!-- Base CSS -->
+    <link rel="stylesheet" type="text/css" href="./base.css">
+
+    <!-- jQuery Google CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+    <!-- Translation script -->
+    <script type="text/javascript" src="./translate.js"></script>
+</head>
+<body>
+    <h1>Age Translator</h1>
+
+    <div>
+        <textarea id="input" name="input" type="text" placeholder="Enter translate text here." rows="10" cols="50"></textarea>
+    </div>
+
+    <div>
+        <input type="range" id="ageSlider" name="ageSlider" min="0" max="100" value="21" step="1" />
+    </div>
+
+    <div>
+        <button id="translateButton">Translate</button>
+    </div>
+
+    <div>
+        <textarea id="output" name="output" type="text" placeholder="Output placeholder" rows="10" cols="50" readonly></textarea>
+    </div>
+
+</body>
+</html>
