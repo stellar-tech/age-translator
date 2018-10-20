@@ -10,12 +10,15 @@
 
     <!-- Font Import -->
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:600" rel="stylesheet">
-    
+
     <!-- Base CSS -->
     <link rel="stylesheet" type="text/css" href="./base.css">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+
+
     <!-- jQuery Google CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Translation script -->
     <script type="text/javascript" src="./translate.js"></script>
 </head>
@@ -26,11 +29,9 @@
         <textarea id="input" name="input" type="text" placeholder="Enter translate text here." rows="10" cols="50"></textarea>
     </div>
 
-    <div>
+    <div id="options">
         <input type="range" id="ageSlider" name="ageSlider" min="0" max="100" value="21" step="1" />
-    </div>
-
-    <div>
+        <span id="sliderValue">21</span>
         <button id="translateButton">Translate</button>
     </div>
 
