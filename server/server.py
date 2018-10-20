@@ -821,10 +821,10 @@ def readFrom(read, log=True):
                 # Log translation
                 logger.info("Performed translation: %s to %s.", query["text"][0], result)
 
-                # For now just return the plaintext
+                # Return the result wrapped in a JSON object
                 sendResponse("200 OK",
-                             "text/plain",
-                             result,
+                             "application/json",
+                             '{"result": "'+result+'"}',
                              read.conn,
                              allowEncodings=encodings)
             else:
