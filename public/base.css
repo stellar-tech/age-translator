@@ -3,18 +3,17 @@ html {
     
     margin: 0 10%;
     padding: 0;
-    background-color: green;
 
     /* Drags body to bottom of page */
     height: 100%;
+
+    background-color: #FBFEFF;
 }
 
 body {
     margin: 0;
     padding: 0 15%;
     text-align: center;
-
-    background-color: red;
 
     /* Drags body to bottom of page */
     min-height: 100%;
@@ -27,9 +26,7 @@ h1 {
     font-size: 50px;
 
     /* Enables separation of words on title onto different lines */
-    max-width: 0px;
-
-    background-color: orange;
+    /* max-width: 0px; */
 }
 
 textarea {
