@@ -811,12 +811,20 @@ def readFrom(read, log=True):
                 # We're expected to translate this
                 body = requestBody(request)
                 query = parse.parse_qs(body)
+
+                # Log before we attempt to use the query
+                logger.debug("Query body: %s", body)
+                logger.debug("Parsed: %s", query)
+
                 result = stringProcessor(query["text"][0], int(query["age"][0]))
 
-                # For now just return the plaintext
+                # Log translation
+                logger.info("Performed translation: %s to %s.", query["text"][0], result)
+
+                # Return the result wrapped in a JSON object
                 sendResponse("200 OK",
-                             "text/plain",
-                             result,
+                             "application/json",
+                             '{"result": "'+result+'"}',
                              read.conn,
                              allowEncodings=encodings)
             else:
