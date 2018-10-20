@@ -25,7 +25,7 @@ $(document).ready(function() {
             data: translateData,
             dataType: "json",
             success: function (translatedText) {
-                $("#output").val(translatedText);
+                $("#output").val(translatedText.result);
             },
             error: function () {
               console.log("Translation failure.");
