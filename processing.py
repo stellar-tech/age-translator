@@ -8,4 +8,4 @@ def stringProcessor(text, age):
     outarr = []
     for word in inarr:
         outarr.append(lookUp(word, age))
-    return ' '.join(word for word in outarr)
+    return ' '.join(word for word in outarr).capitalize()
