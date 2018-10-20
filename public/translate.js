@@ -15,7 +15,11 @@ $(document).ready(function() {
     $('#translateButton').click(function (e) {
         translateTarget = getAge();
         console.log(translateTarget)
+
+        var translateText = $("#input").val(); 
         // Todo: Send translateTarget age to backend function
+        var translatedText = translateText // This would be replaced with a translate function
+        $("#output").val(translatedText);      
     });
 
 
