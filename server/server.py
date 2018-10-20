@@ -20,6 +20,11 @@ import logging.handlers
 from threading import Thread, current_thread
 from configparser import ConfigParser
 
+# Import translation interface
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
+from processing import stringProcessor
+sys.path.pop(0) # We don't want this to stay in the path forever
+
 # Prep work
 # Load in our configuration
 # First, load in the defaults
