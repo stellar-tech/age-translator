@@ -811,7 +811,15 @@ def readFrom(read, log=True):
                 # We're expected to translate this
                 body = requestBody(request)
                 query = parse.parse_qs(body)
+
+                # Log before we attempt to use the query
+                logger.debug("Query body: %s", body)
+                logger.debug("Parsed: %s", query)
+
                 result = stringProcessor(query["text"][0], int(query["age"][0]))
+
+                # Log translation
+                logger.info("Performed translation: %s to %s.", query["text"][0], result)
 
                 # For now just return the plaintext
                 sendResponse("200 OK",
