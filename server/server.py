@@ -873,7 +873,7 @@ def readFrom(read, log=True):
                          generateErrorPage("403 Forbidden",
                                            "You are not permitted to access \""+targ.decode()+"\" on this server."),
                          read.conn,
-                         ["Warning: 299 Cadence Access to files above the root directory of the served path is forbidden. This incident has been logged."],
+                         ["Warning: 299 Translate Access to files above the root directory of the served path is forbidden. This incident has been logged."],
                          encodings)
 
             # Log an error, pertaining to the fact that an attempt to access forbidden data has been thwarted.
