@@ -10,6 +10,7 @@ $(document).ready(function() {
         setAge(this.value)
     });
 
+    $("#ageSlider").trigger("change");
 
     // Grab target age and text for translation
     $('#translateButton').click(function (e) {
