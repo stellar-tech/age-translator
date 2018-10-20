@@ -8,12 +8,13 @@ html {
     height: 100%;
 
     background-color: #FBFEFF;
+
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
     margin: 0;
     padding: 0 15%;
-    text-align: center;
 
     /* Drags body to bottom of page */
     min-height: 100%;
@@ -27,11 +28,32 @@ h1 {
 
     /* Enables separation of words on title onto different lines */
     /* max-width: 0px; */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 
 textarea {
     font-size: 21px;
 }
+
+#options {
+    /* Space out translate boxes and options */
+    margin: 20px 10px;
+
+    min-width: 100%;
+
+    text-align: center;
+}
+
+#ageSlider {
+    width: 500px;
+}
+
+#translateButton {
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
 
 /* Refit at 1100 page width */
 @media (min-width: 1100px) {
