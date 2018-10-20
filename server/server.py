@@ -17,6 +17,7 @@ import re
 import lzma
 import logging
 import logging.handlers
+from urllib import parse
 from threading import Thread, current_thread
 from configparser import ConfigParser
 
@@ -806,9 +807,18 @@ def readFrom(read, log=True):
         logger.debug("Method line %s, target %s.", method.decode(), targ.decode())
         if method.startswith(b"POST") and config.getboolean('enable_post'):
             logger.info("Received POST request to %s.", targ.decode())
-            if targ==b"/translate" and False:
-                # TODO: add handler for translate request
-                pass
+            if targ==b"/translate":
+                # We're expected to translate this
+                body = requestBody(request)
+                query = parse.parse_qs(body)
+                result = stringProcessor(query["text"][0], int(query["age"][0]))
+
+                # For now just return the plaintext
+                sendResponse("200 OK",
+                             "text/plain",
+                             result,
+                             read.conn,
+                             allowEncodings=encodings)
             else:
                 # No other paths can receive a POST.
                 # Tell the browser it can't do that, and inform it that it may only use GET or HEAD here.
