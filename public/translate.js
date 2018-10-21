@@ -3,26 +3,24 @@ $(document).ready(function() {
 
     // Grab target age and text for translation
     function update() {
-        $('#translateButton').click(function (e) {
-            var translateData = {}
-            translateData.age = getAge();
-            translateData.text = $("#input").val();
+        var translateData = {}
+        translateData.age = getAge();
+        translateData.text = $("#input").val();
 
-            $.ajax({
-                type: 'POST',
-                url: '/translate',
-                dataType: 'application/json',
-                crossDomain: true,
-                data: translateData,
-                dataType: "json",
-                success: function (translatedText) {
-                    $("#output").val(translatedText.result);
-                },
-                error: function () {
-                  console.log("Translation failure.");
-                }
-              });
-        });
+        $.ajax({
+            type: 'POST',
+            url: '/translate',
+            dataType: 'application/json',
+            crossDomain: true,
+            data: translateData,
+            dataType: "json",
+            success: function (translatedText) {
+                $("#output").val(translatedText.result);
+            },
+            error: function () {
+              console.log("Translation failure.");
+            }
+          });
     }
 
     // Display the value which the range bar is hovering over on change
