@@ -29,9 +29,11 @@ $(document).ready(function() {
     $("#ageSlider").change(function() {
         $("#sliderValue").html(this.value);
         setAge(this.value)
+        update()
     }).on("input", function() {
         $("#sliderValue").html(this.value);
         setAge(this.value)
+        update()
     });
 
     // Function to set translateToAge to selected age
