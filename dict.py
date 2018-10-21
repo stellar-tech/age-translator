@@ -1,12 +1,24 @@
 youngDict = {
     'lol': ['lmao', 18], 
     'lmao': ['laughing', 40],
+    'otw': ['on the way', 40],
     'ffs': ['goddamnit', 40],
+    'yolo': ['you only live once', 40],
+    'tbh': ['to be honest', 30],
+    'idgaf': ["I don't give a fuck", 16],
+    'ghosted': ['disappeared', 25],
     'goddamnit': ['gosh darn it', 60],
+    'weed': ['pot', 30],
+    'pot': ['marijuana', 45],
+    'marijuana': ["Devil's lettuce", 80],
     'doodoo': ['poo', 6],
     'poo': ['poop', 8],
     'poop': ['crap', 11],
     'crap': ['shit', 15],
+    'dm': ['message', 25],
+    'message': ['fax', 60],
+    'fax': ['telegram', 85],
+    'fortnite': ['video games', 32],
     'peepee': ['weiner', 10],
     'weiner': ['penis', 14],
     'penis': ['dick', 17],
@@ -25,7 +37,11 @@ youngDict = {
     'yum': ['tasty', 13],
     'tasty': ['delicious', 18],
     'grandpa': ['grandfather', 18],
-    'grandma': ['grandmother', 18]
+    'grandma': ['grandmother', 18],
+    'trolling': ['pranking', 30],
+    'strangest': ['darndest', 75],
+    'dating': ['courting', 70],
+    'phone': ['telephone', 70]
 }
 
 oldDict = {}
