@@ -6,7 +6,7 @@ youngDict = {
     'yolo': ['you only live once', 40],
     'tbh': ['to be honest', 30],
     'idgaf': ["I don't give a fuck", 16],
-    'ghosted': ['disappeared', 25],
+    'ghosted': ['disappeared', 35],
     'goddamnit': ['gosh darn it', 60],
     'weed': ['pot', 30],
     'pot': ['marijuana', 45],
