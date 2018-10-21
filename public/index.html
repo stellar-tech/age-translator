@@ -9,6 +9,7 @@
 
 
     <!-- Font Import -->
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 
     <!-- Base CSS -->
@@ -22,19 +23,22 @@
 <body>
     <h1>Age Translator</h1>
 
-    <div>
-        <textarea id="input" name="input" type="text" placeholder="Enter translate text here." rows="10" cols="50"></textarea>
-    </div>
+    <div>Trying to understand what your kids are texting?</div>
+    <div>Can't comprehend what your elderly great-great-grandfather is saying?</div>
+    <div>Enter some text below, set your age, and translate it to something you can understand!</div>
+    
+    <br/>
+
+    <textarea id="input" name="input" type="text" placeholder="Enter text to translate." rows="10" cols="50"></textarea>
 
     <div id="options">
         <div>Translate for Age: <span id="sliderValue">21</span></div>
         <input type="range" id="ageSlider" name="ageSlider" min="0" max="100" value="21" step="1" />
     </div>
- 
 
-    <div>
-        <textarea id="output" name="output" type="text" placeholder="Output placeholder" rows="10" cols="50" readonly></textarea>
-    </div>
+    <textarea id="output" name="output" type="text" placeholder="<output>" rows="10" cols="50" readonly></textarea>
 
+    <br/>
+    <div>A project by Stellar-Tech</div>
 </body>
 </html>
