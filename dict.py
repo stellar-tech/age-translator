@@ -1,5 +1,5 @@
 youngDict = {
-    'lol': ['lmao', 18], 
+    'lol': ['lmao', 18],
     'lmao': ['laughing', 40],
     'otw': ['on the way', 40],
     'ffs': ['goddamnit', 40],
@@ -47,13 +47,6 @@ youngDict = {
 oldDict = {}
 for key in youngDict.keys():
     oldDict[(youngDict.get(key))[0]] = [key, (youngDict.get(key))[1]]
-    
-youngDict['<3']=['love', 40]
-youngDict[':)']=['happy', 40]
-youngDict[':(']=['sad', 40]
-youngDict[":'("]=['crying', 40]
-youngDict[':*']=['kiss', 40]
-youngDict[';)']=['wink', 40]
 
 def dictLookup(word, age):
     check = ''
