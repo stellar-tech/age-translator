@@ -3,10 +3,9 @@ youngDict = {
     'lmao': ['laughter', 40]
 }
 
-oldDict = {
-    'lmao': ['lol', 18],
-    'laughter': ['lmao', 40]
-}
+oldDict = {}
+for key in youngDict.keys():
+    oldDict[(youngDict.get(key))[0]] = [key, (youngDict.get(key))[1]]
 
 def dictLookup(word, age):
     check = ''
