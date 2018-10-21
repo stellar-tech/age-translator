@@ -34,6 +34,9 @@ $(document).ready(function() {
         update()
     });
 
+    // Initialize age
+    $("#ageSlider").trigger("change");
+
     // Function to set translateToAge to selected age
     function setAge(age) {
         translateToAge = age;
