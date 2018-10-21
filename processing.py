@@ -7,7 +7,7 @@ def lookUp(word, age):
 
     # Handle small children
     if age<3:
-        babyTalk = ["goo", "ga", "waa", "WAA", "waah"]
+        babyTalk = ["goo", "ga", "waa", "waaaa", "waah"]
         return babyTalk[random.randint(0, len(babyTalk)-1)]
 
     # If 3 or older, use the actual translation dictionary
