@@ -47,6 +47,30 @@ youngDict = {
 oldDict = {}
 for key in youngDict.keys():
     oldDict[(youngDict.get(key))[0]] = [key, (youngDict.get(key))[1]]
+    
+# One-way young-to-old
+youngDict['bruh']=['bro', 18]
+youngDict['bro']=['brother', 25]
+youngDict['fam']=['friends', 18]
+youngDict['bae']=['baby', 25]
+youngDict['turnt']=['crazy', 16]
+youngDict['uber']=['taxi', 60]
+youngDict['lyft']=['taxi', 60]
+youngDict['computer']=['machine', 62]
+youngDict['signature']=['John Hancock', 60]
+youngDict['trouble']=['a pickle', 73]
+youngDict['candy']=['hard candy', 65]
+youngDict['hackathon']=['computer party', 40]
+youngDict['nickelback']=['the music of Satan', 63]
+youngDict['twitter']=['facebook', 65]
+youngDict['snapchat']=['facebook', 65]
+youngDict['instagram']=['facebook', 65]
+youngDict['linkedin']=['facebook', 65]
+youngDict['tumblr']=['facebook', 65]
+youngDict['xbox']=['nintendo', 65]
+youngDict['playstation']=['nintendo', 65]
+youngDict['programming']=['hacking', 50]
+youngDict['hacked']=['possessed', 60]
 
 def dictLookup(word, age):
     check = ''
