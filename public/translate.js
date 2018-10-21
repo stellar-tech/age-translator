@@ -37,6 +37,18 @@ $(document).ready(function() {
     // Initialize age
     $("#ageSlider").trigger("change");
 
+    // Handle textarea changes
+    var oldValue = ""
+    $("#input").on("change keyup paste", function() {
+        var curr=$(this).val();
+        if (oldValue==curr) {
+            return; // Don't process the same change twice
+        }
+
+        oldValue=curr;
+        update();
+    });
+
     // Function to set translateToAge to selected age
     function setAge(age) {
         translateToAge = age;
