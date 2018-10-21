@@ -1,6 +1,30 @@
 $(document).ready(function() {
     var translateToAge; // Final target age for translation
 
+    // Grab target age and text for translation
+    function update() {
+        $('#translateButton').click(function (e) {
+            var translateData = {}
+            translateData.age = getAge();
+            translateData.text = $("#input").val();
+
+            $.ajax({
+                type: 'POST',
+                url: '/translate',
+                dataType: 'application/json',
+                crossDomain: true,
+                data: translateData,
+                dataType: "json",
+                success: function (translatedText) {
+                    $("#output").val(translatedText.result);
+                },
+                error: function () {
+                  console.log("Translation failure.");
+                }
+              });
+        });
+    }
+
     // Display the value which the range bar is hovering over on change
     $("#ageSlider").change(function() {
         $("#sliderValue").html(this.value);
@@ -9,30 +33,6 @@ $(document).ready(function() {
         $("#sliderValue").html(this.value);
         setAge(this.value)
     });
-
-
-    // Grab target age and text for translation
-    $('#translateButton').click(function (e) {
-        var translateData = {}
-        translateData.age = getAge();
-        translateData.text = $("#input").val(); 
-
-        $.ajax({
-            type: 'POST',
-            url: '/translate',
-            dataType: 'application/json',
-            crossDomain: true,
-            data: translateData,
-            dataType: "json",
-            success: function (translatedText) {
-                $("#output").val(translatedText.result);
-            },
-            error: function () {
-              console.log("Translation failure.");
-            }
-          });
-    });
-
 
     // Function to set translateToAge to selected age
     function setAge(age) {
@@ -45,4 +45,3 @@ $(document).ready(function() {
 });
 
 
-  
