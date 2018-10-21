@@ -41,13 +41,19 @@ youngDict = {
     'trolling': ['pranking', 30],
     'strangest': ['darndest', 75],
     'dating': ['courting', 70],
-    'phone': ['telephone', 70]
+    'phone': ['telephone', 70],
+    'doggy': ['dog', 10],
+    'kitty': ['cat', 10],
+    'birdie': ['bird', 10],
+    'bunny': ['rabbit', 10],
+    'iirc': ['if I recall correctly', 40],
+    'email': ['AOL', 50]
 }
 
 oldDict = {}
 for key in youngDict.keys():
     oldDict[(youngDict.get(key))[0]] = [key, (youngDict.get(key))[1]]
-    
+
 # One-way young-to-old
 youngDict['bruh']=['bro', 18]
 youngDict['bro']=['brother', 25]
