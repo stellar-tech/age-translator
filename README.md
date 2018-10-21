@@ -1,2 +1,2 @@
-# age-translator
+# Age Translater
 DemonHacks 2018 project
