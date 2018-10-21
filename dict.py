@@ -35,6 +35,9 @@ for key in youngDict.keys():
 youngDict['<3']=['love', 40]
 youngDict[':)']=['happy', 40]
 youngDict[':(']=['sad', 40]
+youngDict[":'("]=['crying', 40]
+youngDict[':*']=['kiss', 40]
+youngDict[';)']=['wink', 40]
 
 def dictLookup(word, age):
     check = ''
