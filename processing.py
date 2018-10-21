@@ -19,6 +19,3 @@ def stringProcessor(text, age):
             text = text + word
     x = text.capitalize()
     return x
-
-print(stringProcessor("Wow, that's cool lmao.", 15))
-print(stringProcessor("lol, lmao, laughter.", 30))
