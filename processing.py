@@ -25,5 +25,4 @@ def stringProcessor(text, age):
             text = text + ' ' + word
         else:
             text = text + word
-    x = text.capitalize()
-    return x
+    return text

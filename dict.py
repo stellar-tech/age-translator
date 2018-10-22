@@ -81,13 +81,17 @@ youngDict['hacked']=['possessed', 60]
 
 def dictLookup(word, age):
     check = ''
-    word = word.lower()
+    uppercase = (word[0].isupper())
     while check != word:
         check = word
-        if youngDict.get(word) != None:
-            if (youngDict.get(word))[1] <= age:
-                word = (youngDict.get(word))[0]
-        if oldDict.get(word) != None:
-            if (oldDict.get(word))[1] > age:
-                word = (oldDict.get(word))[0]
+        key = word.lower()
+        if youngDict.get(key) != None:
+            if (youngDict.get(key))[1] <= age:
+                word = (youngDict.get(key))[0]
+                key=word.lower() # Preserve ability to check oldDict on second pass
+        if oldDict.get(key) != None:
+            if (oldDict.get(key))[1] > age:
+                word = (oldDict.get(key))[0]
+    if uppercase:
+        word=word[0].upper()+word[1:]
     return word
