@@ -1,11 +1,14 @@
 $(document).ready(function() {
     var translateToAge; // Final target age for translation
+    var lastAge=-1; // Last requested aage
 
     // Grab target age and text for translation
     function update() {
         var translateData = {}
         translateData.age = getAge();
         translateData.text = $("#input").val();
+
+        var thisAge=lastAge=translateData.age; // Age of this request (also setting lastAge)
 
         $.ajax({
             type: 'POST',
@@ -15,7 +18,8 @@ $(document).ready(function() {
             data: translateData,
             dataType: "json",
             success: function (translatedText) {
-                $("#output").val(translatedText.result);
+                if (thisAge==lastAge)
+                    $("#output").val(translatedText.result);
             },
             error: function () {
               console.log("Translation failure.");
